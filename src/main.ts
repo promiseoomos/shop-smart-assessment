@@ -12,9 +12,10 @@ import Aura from '@primeuix/themes/aura'
 import VueAwesomePaginate from 'vue-awesome-paginate'
 import 'vue-awesome-paginate/dist/style.css'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 
 const pinia = createPinia()
-// pinia.use(piniaPluginPersistedstate)
+pinia.use(piniaPluginPersistedstate)
 
 pinia.use(
   createPersistedState({

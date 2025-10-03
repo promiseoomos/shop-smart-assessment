@@ -6,10 +6,10 @@
           <p @click="router.push('/')" class="text-2xl cursor-pointer font-bold">ShopSmart</p>
         </div>
         <div class="flex gap-10 items-center">
-          <p class="text-neutral-600">Home</p>
-          <p class="text-neutral-600">Categories</p>
-          <p class="text-neutral-600">Deals</p>
-          <p class="text-neutral-600">New Arrivals</p>
+          <p @click="router.push('/')" class="text-neutral-600 cursor-pointer">Home</p>
+          <p class="text-neutral-600 cursor-pointer">Categories</p>
+          <p class="text-neutral-600 cursor-pointer">Deals</p>
+          <p class="text-neutral-600 cursor-pointer">New Arrivals</p>
         </div>
       </div>
 

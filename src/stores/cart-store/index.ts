@@ -1,8 +1,5 @@
 import type { Product } from '@/interfaces/product-interface'
-// import { products } from '@/resources/products_list'
 import { defineStore } from 'pinia'
-// import authApis from '@/services/authservice'
-// import type { DynamicObject } from '@/interfaces/admininterfaces'
 
 export const useCartStore = defineStore('cartstore', {
   persist: true,

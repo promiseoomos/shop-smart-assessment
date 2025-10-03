@@ -78,7 +78,7 @@
           <div class="mt-7">
             <p class="text-lg font-bold">Products</p>
 
-            <div class="flex flex-wrap gap-3 justify-start mt-3">
+            <div v-if="!fetching" class="flex flex-wrap gap-3 justify-start mt-3">
               <ProductCard
                 v-for="(item, index) in products"
                 :key="index"

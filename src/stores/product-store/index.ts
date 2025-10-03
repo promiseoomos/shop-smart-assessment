@@ -1,9 +1,6 @@
 import type { Product } from '@/interfaces/product-interface'
 import products from '@/services/products'
-// import { products } from '@/resources/products_list'
 import { defineStore } from 'pinia'
-// import authApis from '@/services/authservice'
-// import type { DynamicObject } from '@/interfaces/admininterfaces'
 
 export const useProductStore = defineStore('productstore', {
   persist: true,
@@ -18,6 +15,11 @@ export const useProductStore = defineStore('productstore', {
     async fetchAllProducts(query: string) {
       return products.$_getAllProducts(query).then((response) => {
         this.allProducts = response.data
+        return response
+      })
+    },
+    async fetchSingleProduct(id: string) {
+      return products.$_getSingleProduct(id).then((response) => {
         return response
       })
     },

@@ -5,7 +5,7 @@ export default {
     return apiClient.get(`/products?${query}`)
   },
 
-  $_getSingleProducts(id: string) {
+  $_getSingleProduct(id: string) {
     return apiClient.get(`/products/${id}`)
   },
 }
