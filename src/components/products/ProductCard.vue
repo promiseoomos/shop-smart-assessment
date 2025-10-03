@@ -1,19 +1,25 @@
 <template>
-  <div class="flex flex-col w-[240px] h-[380px] rounded-lg border border-neutral-100 bg-white">
+  <div
+    class="flex flex-col w-[260px] h-[450px] px-2 py-2 rounded-lg border border-neutral-100 bg-white"
+  >
     <img
       @click="router.push(`/product/${product.id}`)"
-      class="w-full h-[65%] rounded-t-lg"
-      :src="`../../images/${product.image}`"
+      class="w-full h-[55%] rounded-t-lg"
+      :src="`${product.image}`"
     />
-    <div class="px-3 pt-3 pb-3">
-      <p @click="router.push(`/product/${product.id}`)" class="font-medium">{{ product.name }}</p>
-      <p class="text-neutral-400">{{ product.currency }} {{ product.price }}</p>
+    <div class="px-3 pt-3 pb-1 flex flex-col justify-between grow">
+      <div class="flex flex-col justify-between">
+        <p @click="router.push(`/product/${product.id}`)" class="font-medium">
+          {{ product.title }}
+        </p>
+        <p class="text-neutral-500">${{ product.price }}</p>
+      </div>
 
       <div class="flex gap-4 products-center">
         <button
           v-if="!checkInCart"
           @click="addToCart"
-          class="bg-blue-100 w-4/5 flex justify-center gap-2 cursor-pointer text-blue-400 px-4 py-2 mt-5 mb-5 rounded-md"
+          class="bg-blue-100 w-4/5 flex justify-center gap-2 cursor-pointer text-blue-400 px-4 py-2 mt-5 mb-3 rounded-md"
         >
           <el-icon size="20" class="mt-[2px]"><ShoppingCart /></el-icon>
           Add to Cart
@@ -21,7 +27,7 @@
         <button
           v-else
           @click="addToCart"
-          class="bg-blue-400 w-4/5 flex justify-center gap-2 cursor-pointer text-white px-4 py-2 mt-5 mb-5 rounded-md"
+          class="bg-blue-400 w-4/5 flex justify-center gap-2 cursor-pointer text-white px-4 py-2 mt-5 mb-3 rounded-md"
         >
           View in Cart
         </button>

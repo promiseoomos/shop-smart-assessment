@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col w-[240px] h-[380px]">
-    <img class="w-full h-[65%] rounded-lg" :src="`../../images/${product.image}`" />
+    <img class="w-full h-[65%] rounded-lg" :src="`${product.image}`" />
     <div class="pt-3 flex justify-between">
-      <p class="font-medium text-xs">{{ product.name }}</p>
+      <p class="font-medium text-xs">{{ product.title }}</p>
       <p class="text-neutral-400 text-xs">{{ product.currency }} {{ product.price }}</p>
     </div>
     <div class="flex gap-4 justify">

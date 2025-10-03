@@ -12,13 +12,13 @@
           <img
             v-if="currentProduct"
             class="w-full h-[500px] rounded-lg"
-            :src="`../../images/${currentProduct?.image}`"
+            :src="`${currentProduct?.image}`"
           />
         </div>
 
         <div v-if="currentProduct" class="w-1/2 flex flex-col justify-between">
           <div>
-            <p class="font-bold text-4xl">{{ currentProduct.name }}</p>
+            <p class="font-bold text-4xl">{{ currentProduct.title }}</p>
             <p class="mt-2 text-2xl">{{ currentProduct.currency }} {{ currentProduct.price }}</p>
 
             <p class="text-neutral-500 mt-4" v-html="currentProduct.description"></p>
