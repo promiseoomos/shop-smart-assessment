@@ -20,5 +20,15 @@ export const useCartStore = defineStore('cartstore', {
         }
       }
     },
+
+    removeFromCart(product: Product | undefined) {
+      if (product) {
+        const isInCart = this.cart.findIndex((x: Product) => x.id == product.id)
+
+        if (isInCart != -1) {
+          this.cart.splice(isInCart, 1)
+        }
+      }
+    },
   },
 })

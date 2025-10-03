@@ -14,8 +14,8 @@
       </div>
 
       <div class="flex gap-4 align-middle items-center">
-        <div class="flex">
-          <el-icon class="cursor-pointer" size="20"><ShoppingCart /></el-icon>
+        <div class="flex cursor-pointer" @click="router.push(`/store-cart`)">
+          <el-icon size="20"><ShoppingCart /></el-icon>
           <p class="text-sm right-2 bg-red-400 rounded-full w-5 h-5 text-center -top-2 relative">
             {{ cartstore.cart.length }}
           </p>
