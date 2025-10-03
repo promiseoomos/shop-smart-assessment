@@ -40,6 +40,7 @@
 </template>
 
 <script setup lang="ts">
+import { generateToast } from '@/composables/useToast'
 import type { Product } from '@/interfaces/product-interface'
 import { useCartStore } from '@/stores/cart-store'
 import { ref, computed } from 'vue'
@@ -62,6 +63,7 @@ const addToCart = async () => {
 
   try {
     cartstore.addToCart(props.product)
+    generateToast('Item Added to Cart. Proceed to checkout', '', 'success')
   } catch (err) {
     console.log(err)
   } finally {

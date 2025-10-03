@@ -135,6 +135,7 @@ const addToCart = async () => {
 
   try {
     cartstore.addToCart(currentProduct.value)
+    generateToast('Item Added to Cart. Proceed to checkout', '', 'success')
   } catch (err) {
     console.log(err)
   } finally {
